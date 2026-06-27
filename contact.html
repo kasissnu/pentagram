@@ -3,11 +3,47 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index,follow" />
+    <meta name="theme-color" content="#c1405d" />
     <meta
       name="description"
       content="Contact Pentagram Expert for luxury interior design projects in Gurgaon."
     />
     <title>Contact Us | Pentagram Expert</title>
+    <link rel="canonical" href="https://kasissnu.github.io/pentagram/contact.html" />
+    <link rel="icon" href="pictures/Pentagram Logo.svg" type="image/svg+xml" />
+    <link rel="icon" href="pictures/pentagram logo-100.jpg" type="image/jpeg" sizes="100x100" />
+    <link rel="apple-touch-icon" href="pictures/pentagram logo.png" />
+    <meta property="og:site_name" content="Pentagram Expert" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://kasissnu.github.io/pentagram/contact.html" />
+    <meta
+      property="og:title"
+      content="Contact Us | Pentagram Expert"
+    />
+    <meta
+      property="og:description"
+      content="Contact Pentagram Expert for luxury interior design projects in Gurgaon."
+    />
+    <meta property="og:image" content="https://kasissnu.github.io/pentagram/pictures/social-preview.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1920" />
+    <meta property="og:image:height" content="1080" />
+    <meta
+      property="og:image:alt"
+      content="Pentagram Expert luxury interior design studio"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Contact Us | Pentagram Expert" />
+    <meta
+      name="twitter:description"
+      content="Contact Pentagram Expert for luxury interior design projects in Gurgaon."
+    />
+    <meta name="twitter:image" content="https://kasissnu.github.io/pentagram/pictures/social-preview.png" />
+    <meta
+      name="twitter:image:alt"
+      content="Pentagram Expert luxury interior design studio"
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body class="inner-page contact-page">
@@ -41,10 +77,6 @@
         <div class="contact-content">
           <div class="contact-hero-copy">
             <h1>Get in touch with Pentagram Expert to begin transforming your dream spaces into reality</h1>
-            <p>
-              Share a little context about your home, timeline, and the kind of support you need.
-              We will reply with a clear next step and an honest sense of fit.
-            </p>
           </div>
 
           <div class="contact-meta-row" aria-label="Contact details">
@@ -65,38 +97,38 @@
           <div class="contact-form-shell">
             <div class="contact-form-kicker">How about a quick introduction?</div>
             <form class="contact-form" data-contact-form>
-              <label>
-                Full Name*
-                <input type="text" name="name" autocomplete="name" required />
+              <label class="form-field">
+                <span class="form-label">Full Name*</span>
+                <input type="text" name="name" autocomplete="name" placeholder="Full Name*" required />
               </label>
-              <label>
-                Mobile Number*
-                <input type="tel" name="phone" autocomplete="tel" required />
+              <label class="form-field">
+                <span class="form-label">Mobile Number*</span>
+                <input type="tel" name="phone" autocomplete="tel" placeholder="Mobile Number*" required />
               </label>
-              <label>
-                Email*
-                <input type="email" name="email" autocomplete="email" />
+              <label class="form-field">
+                <span class="form-label">Email*</span>
+                <input type="email" name="email" autocomplete="email" placeholder="Email*" />
               </label>
-              <label>
-                Design + Build
+              <label class="form-field">
+                <span class="form-label">Design + Build</span>
                 <select name="project-type" required>
-                  <option value="">Design + Build</option>
+                  <option value="">What are you looking for?</option>
                   <option>Full home interiors</option>
                   <option>Villa or penthouse</option>
                   <option>Renovation</option>
                   <option>Commercial space</option>
                 </select>
               </label>
-              <label class="full-field">
-                City Name*
-                <input type="text" name="city" autocomplete="address-level2" required />
+              <label class="full-field form-field">
+                <span class="form-label">City Name*</span>
+                <input type="text" name="city" autocomplete="address-level2" placeholder="City Name*" required />
               </label>
-              <label class="full-field">
-                Location*
-                <input type="text" name="location" autocomplete="street-address" required />
+              <label class="full-field form-field">
+                <span class="form-label">Location*</span>
+                <input type="text" name="location" autocomplete="street-address" placeholder="Location*" required />
               </label>
-              <label class="full-field">
-                Space Type*
+              <label class="full-field form-field">
+                <span class="form-label">Space Type*</span>
                 <select name="space-type" required>
                   <option value="">Space Type*</option>
                   <option>Apartment</option>
@@ -106,9 +138,9 @@
                   <option>Commercial space</option>
                 </select>
               </label>
-              <label class="full-field">
-                Message
-                <textarea name="message" rows="4" placeholder="Project size, timeline, priorities, and anything important"></textarea>
+              <label class="full-field form-field">
+                <span class="form-label">Message</span>
+                <textarea name="message" rows="4" placeholder="Write your message here*"></textarea>
               </label>
               <button class="button button-primary full-field" type="submit">Send Enquiry</button>
               <p class="form-note" data-form-note aria-live="polite"></p>

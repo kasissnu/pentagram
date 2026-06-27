@@ -2165,8 +2165,9 @@ h3 {
   display: grid;
   gap: 10px;
   color: var(--muted);
-  font-size: 13px;
-  font-weight: 500;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.2;
   text-transform: none;
 }
 
@@ -2185,6 +2186,11 @@ h3 {
     background 180ms ease,
     border-color 180ms ease,
     box-shadow 180ms ease;
+}
+
+.contact-page .contact-form input::placeholder,
+.contact-page .contact-form textarea::placeholder {
+  color: transparent;
 }
 
 .contact-page .contact-form input:focus,
@@ -2414,35 +2420,44 @@ h3 {
   .contact-rail {
     position: relative;
     top: auto;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
     min-height: 300px;
   }
 
   .contact-content {
-    padding: 24px 18px 34px;
+    padding: 28px 18px 40px;
     border-top: 0;
   }
 
   .contact-hero-copy h1 {
-    font-size: clamp(30px, 7vw, 46px);
+    max-width: 18ch;
+    margin-bottom: 18px;
+    font-size: clamp(32px, 8.2vw, 48px);
+    line-height: 1.02;
   }
 
   .contact-hero-copy p {
-    font-size: 16px;
+    max-width: 32ch;
+    font-size: 15px;
+    line-height: 1.55;
   }
 
   .contact-meta-row {
     grid-template-columns: 1fr;
-    gap: 14px;
+    gap: 16px;
+    padding-top: 14px;
+    padding-bottom: 14px;
   }
 
   .contact-meta-item {
     align-items: start;
-    font-size: 16px;
+    font-size: 15px;
   }
 
   .contact-form {
     grid-template-columns: 1fr;
-    gap: 16px;
+    gap: 18px;
   }
 
   .contact-form .button {
@@ -2820,16 +2835,59 @@ h3 {
     overflow-wrap: anywhere;
   }
 
-  .contact-form {
+  .contact-page .contact-form {
     grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .contact-page .contact-form label.form-field {
+    gap: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    min-height: auto;
+  }
+
+  .contact-page .contact-form label.form-field.full-field {
+    min-height: auto;
+  }
+
+  .contact-page .contact-form .form-label {
+    display: none;
   }
 
   .contact-page .contact-form input,
   .contact-page .contact-form select,
   .contact-page .contact-form textarea {
-    min-height: 48px;
-    font-size: 16px;
-    padding: 14px 16px;
+    font-size: 14px;
+    min-height: 58px;
+    padding: 16px 18px;
+    border: 1px solid color-mix(in srgb, var(--line) 88%, var(--charcoal));
+    border-radius: 4px;
+    background: var(--white);
+    box-shadow: none;
+    font-weight: 400;
+  }
+
+  .contact-page .contact-form input::placeholder,
+  .contact-page .contact-form textarea::placeholder {
+    color: var(--muted);
+    font-weight: 400;
+    opacity: 1;
+  }
+
+  .contact-page .contact-form select {
+    color: var(--muted);
+    font-weight: 400;
+  }
+
+  .contact-page .contact-form select:valid {
+    color: var(--ink);
+  }
+
+  .contact-page .contact-form textarea {
+    min-height: 110px;
+    resize: vertical;
   }
 
   .contact-rail-label {
@@ -2843,6 +2901,8 @@ h3 {
   }
 
   .contact-rail {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
     min-height: 240px;
     aspect-ratio: 16 / 11;
   }
@@ -2852,14 +2912,14 @@ h3 {
   }
 
   .contact-content {
-    padding: 20px 16px 30px;
-    gap: 22px;
+    padding: 24px 16px 34px;
+    gap: 24px;
   }
 
   .contact-hero-copy h1 {
-    margin-bottom: 16px;
+    margin-bottom: 18px;
     letter-spacing: -0.03em;
-    font-size: clamp(28px, 8vw, 40px);
+    font-size: clamp(30px, 8vw, 42px);
   }
 
   .contact-hero-copy p {
@@ -2867,7 +2927,7 @@ h3 {
   }
 
   .contact-meta-item {
-    gap: 12px;
+    gap: 14px;
     grid-template-columns: 40px minmax(0, 1fr);
   }
 
@@ -2877,17 +2937,28 @@ h3 {
   }
 
   .contact-form-shell {
-    gap: 16px;
+    gap: 18px;
   }
 
   .contact-form-kicker {
-    font-size: 20px;
+    font-size: 18px;
+  }
+
+  .contact-page .contact-form .button {
+    min-height: 54px;
+    border-color: var(--terracotta);
+    color: var(--white);
+    background: var(--terracotta);
+  }
+
+  .contact-page .contact-form .button:hover {
+    background: color-mix(in srgb, var(--terracotta) 92%, black);
   }
 
   .contact-page .contact-form input,
   .contact-page .contact-form select,
   .contact-page .contact-form textarea {
-    border-radius: 6px;
+    border-radius: 4px;
   }
 
   .footer-top {
