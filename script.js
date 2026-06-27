@@ -9,10 +9,16 @@ function updateHeader() {
   header?.classList.toggle("is-scrolled", window.scrollY > 12);
 }
 
-navToggle?.addEventListener("click", () => {
-  const isOpen = nav?.classList.toggle("is-open") ?? false;
+function setNavOpen(isOpen) {
+  nav?.classList.toggle("is-open", isOpen);
   header?.classList.toggle("nav-open", isOpen);
-  navToggle.setAttribute("aria-expanded", String(isOpen));
+  navToggle?.classList.toggle("is-open", isOpen);
+  navToggle?.setAttribute("aria-expanded", String(isOpen));
+}
+
+navToggle?.addEventListener("click", () => {
+  const isOpen = !nav?.classList.contains("is-open");
+  setNavOpen(isOpen);
 });
 
 document.addEventListener("click", (event) => {
@@ -20,9 +26,18 @@ document.addEventListener("click", (event) => {
   const target = event.target;
   if (!(target instanceof Node)) return;
   if (nav.contains(target) || navToggle.contains(target)) return;
-  nav.classList.remove("is-open");
-  header.classList.remove("nav-open");
-  navToggle.setAttribute("aria-expanded", "false");
+  setNavOpen(false);
+});
+
+nav?.addEventListener("click", (event) => {
+  const target = event.target;
+  if (!(target instanceof Element)) return;
+  if (target.closest("a")) setNavOpen(false);
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key !== "Escape") return;
+  setNavOpen(false);
 });
 
 contactForm?.addEventListener("submit", (event) => {
