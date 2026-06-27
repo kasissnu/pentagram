@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Contact Pentagram Interiors for luxury interior design projects in Gurgaon."
+      content="Contact Pentagram Expert for luxury interior design projects in Gurgaon."
     />
-    <title>Contact Us | Pentagram Interiors</title>
+    <title>Contact Us | Pentagram Expert</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body class="inner-page">
+  <body class="inner-page contact-page">
     <header class="site-header" data-header>
-      <a class="brand" href="index.html" aria-label="Pentagram Interiors home">
-        <img class="brand-logo" src="pictures/pentagram logo.png" alt="Pentagram Interiors logo" />
+      <a class="brand" href="index.html" aria-label="Pentagram Expert home">
+        <img class="brand-logo" src="pictures/pentagram logo.png" alt="Pentagram Expert logo" />
       </a>
       <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" data-nav-toggle>
         <span></span>
@@ -28,87 +28,92 @@
     </header>
 
     <main>
-      <section class="page-hero contact-hero">
-        <div>
-          <p class="eyebrow">Contact us</p>
-          <h1>Tell us about the home you want to create.</h1>
-        </div>
-        <p>
-          Share your location, approximate size, timeline, and the type of support you need. We will get
-          back with a calm next step.
-        </p>
-      </section>
-
       <section class="contact-layout">
-        <div class="contact-details">
-          <div>
-            <p class="eyebrow">Studio</p>
-            <h2>Gurgaon, Haryana</h2>
-            <p>Available for residential interiors across Gurgaon, Delhi NCR, and select outstation projects.</p>
+        <div class="contact-rail" aria-hidden="true">
+          <img
+            src="pictures/1.webp"
+            alt=""
+            loading="eager"
+            decoding="async"
+          />
+        </div>
+        <div class="contact-content">
+          <div class="contact-hero-copy">
+            <h1>Get in touch with Pentagram Expert to begin transforming your dream spaces into reality</h1>
+            <p>
+              Share a little context about your home, timeline, and the kind of support you need.
+              We will reply with a clear next step and an honest sense of fit.
+            </p>
           </div>
-          <div class="office-grid">
-            <article>
-              <span>Location</span>
-              <strong>Gurgaon</strong>
-              <p>Primary studio and project coordination base.</p>
-            </article>
-            <article>
-              <span>Response time</span>
-              <strong>1 business day</strong>
-              <p>We review incoming enquiries with project scope in mind.</p>
-            </article>
-            <article>
-              <span>Working hours</span>
-              <strong>Mon - Sat</strong>
-              <p>Studio calls and meetings by prior appointment.</p>
-            </article>
+
+          <div class="contact-meta-row" aria-label="Contact details">
+            <a class="contact-meta-item" href="tel:+917906899138">
+              <span class="contact-meta-icon" aria-hidden="true">☎</span>
+              <span>+91 790 6899 138</span>
+            </a>
+            <a class="contact-meta-item" href="mailto:rishabh@pentagram.expert">
+              <span class="contact-meta-icon" aria-hidden="true">✉</span>
+              <span>rishabh@pentagram.expert</span>
+            </a>
+            <div class="contact-meta-item contact-meta-address">
+              <span class="contact-meta-icon" aria-hidden="true">⌂</span>
+              <span>Ground Floor, Opp DLF Alameda, Sector 73 Gurugram Haryana 122101</span>
+            </div>
           </div>
-          <div class="contact-list">
-            <a href="mailto:hello@pentagraminteriors.in">
-              <span>Email</span>
-              hello@pentagraminteriors.in
-            </a>
-            <a href="tel:+919999999999">
-              <span>Phone</span>
-              +91 99999 99999
-            </a>
-            <a href="https://www.instagram.com/" target="_blank" rel="noreferrer">
-              <span>Instagram</span>
-              @pentagraminteriors
-            </a>
+
+          <div class="contact-form-shell">
+            <div class="contact-form-kicker">How about a quick introduction?</div>
+            <form class="contact-form" data-contact-form>
+              <label>
+                Full Name*
+                <input type="text" name="name" autocomplete="name" required />
+              </label>
+              <label>
+                Mobile Number*
+                <input type="tel" name="phone" autocomplete="tel" required />
+              </label>
+              <label>
+                Email*
+                <input type="email" name="email" autocomplete="email" />
+              </label>
+              <label>
+                Design + Build
+                <select name="project-type" required>
+                  <option value="">Design + Build</option>
+                  <option>Full home interiors</option>
+                  <option>Villa or penthouse</option>
+                  <option>Renovation</option>
+                  <option>Commercial space</option>
+                </select>
+              </label>
+              <label class="full-field">
+                City Name*
+                <input type="text" name="city" autocomplete="address-level2" required />
+              </label>
+              <label class="full-field">
+                Location*
+                <input type="text" name="location" autocomplete="street-address" required />
+              </label>
+              <label class="full-field">
+                Space Type*
+                <select name="space-type" required>
+                  <option value="">Space Type*</option>
+                  <option>Apartment</option>
+                  <option>Villa</option>
+                  <option>Penthouse</option>
+                  <option>Builder floor</option>
+                  <option>Commercial space</option>
+                </select>
+              </label>
+              <label class="full-field">
+                Message
+                <textarea name="message" rows="4" placeholder="Project size, timeline, priorities, and anything important"></textarea>
+              </label>
+              <button class="button button-primary full-field" type="submit">Send Enquiry</button>
+              <p class="form-note" data-form-note aria-live="polite"></p>
+            </form>
           </div>
         </div>
-
-        <form class="contact-form" data-contact-form>
-          <label>
-            Name
-            <input type="text" name="name" autocomplete="name" required />
-          </label>
-          <label>
-            Phone
-            <input type="tel" name="phone" autocomplete="tel" required />
-          </label>
-          <label>
-            Email
-            <input type="email" name="email" autocomplete="email" />
-          </label>
-          <label>
-            Project Type
-            <select name="project-type" required>
-              <option value="">Select one</option>
-              <option>Full home interiors</option>
-              <option>Villa or penthouse</option>
-              <option>Renovation</option>
-              <option>Commercial space</option>
-            </select>
-          </label>
-          <label class="full-field">
-            Message
-            <textarea name="message" rows="5" placeholder="Location, size, timeline, and anything important"></textarea>
-          </label>
-          <button class="button button-primary full-field" type="submit">Send Enquiry</button>
-          <p class="form-note" data-form-note aria-live="polite"></p>
-        </form>
       </section>
     </main>
 
@@ -117,10 +122,10 @@
         <div class="footer-columns">
           <section>
             <div class="footer-brand-stack">
-              <img class="footer-logo" src="pictures/pentagram logo.png" alt="Pentagram Interiors logo" />
-              <h3>Pentagram Interiors</h3>
+              <img class="footer-logo" src="pictures/pentagram logo.png" alt="Pentagram Expert logo" />
+              <h3>Pentagram Expert</h3>
             </div>
-            <p>Luxury interior design studio based in Gurgaon.</p>
+            <p>Interior design studio for refined homes across Gurgaon and Delhi NCR.</p>
           </section>
           <section>
             <h3>Services</h3>
@@ -144,7 +149,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <span>© 2026 Pentagram Interiors</span>
+        <span>© 2026 Pentagram Expert</span>
         <a href="#">Privacy Policy</a>
       </div>
     </footer>
