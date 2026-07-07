@@ -110,7 +110,7 @@
                 <input type="email" name="email" autocomplete="email" placeholder="Email*" />
               </label>
               <label class="form-field">
-                <span class="form-label">Design + Build</span>
+                <span class="form-label">Service Required</span>
                 <select name="project-type" required>
                   <option value="">What are you looking for?</option>
                   <option>Full home interiors</option>
@@ -120,27 +120,46 @@
                 </select>
               </label>
               <label class="full-field form-field">
-                <span class="form-label">City Name*</span>
-                <input type="text" name="city" autocomplete="address-level2" placeholder="City Name*" required />
+                <span class="form-label">City*</span>
+
+                <select name="city" required>
+                    <option value="">Select your city</option>
+                    <option>Gurgaon</option>
+                    <option>Other City (Additional site visit & execution charges may apply)</option>
+                </select>
               </label>
               <label class="full-field form-field">
                 <span class="form-label">Location*</span>
                 <input type="text" name="location" autocomplete="street-address" placeholder="Location*" required />
               </label>
               <label class="full-field form-field">
-                <span class="form-label">Space Type*</span>
-                <select name="space-type" required>
-                  <option value="">Space Type*</option>
-                  <option>Apartment</option>
-                  <option>Villa</option>
-                  <option>Penthouse</option>
-                  <option>Builder floor</option>
-                  <option>Commercial space</option>
+                <span class="form-label">Project Budget*</span>
+
+                <select name="budget" required>
+                    <option value="">Select your project budget</option>
+
+                    <option>₹1 Cr. and above</option>
+
+                    <option>₹50 Lakhs - ₹1 Cr.</option>
+
+                    <option>₹25 Lakhs - ₹50 Lakhs</option>
+
+                    <option>₹15 Lakhs - ₹25 Lakhs</option>
+
+                    <option>Less than ₹15 Lakhs (We don't serve unfortunately)</option>
+
                 </select>
               </label>
               <label class="full-field form-field">
-                <span class="form-label">Message</span>
-                <textarea name="message" rows="4" placeholder="Write your message here*"></textarea>
+                <span class="form-label">Project Details</span>
+
+                <textarea
+                    name="message"
+                    rows="5"
+                    placeholder="Tell us about your project...
+
+              • Approx. size (sq. ft.)
+              • Possession date"></textarea>
               </label>
               <button class="button button-primary full-field" type="submit">Send Enquiry</button>
               <p class="form-note" data-form-note aria-live="polite"></p>

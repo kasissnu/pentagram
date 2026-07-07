@@ -40,11 +40,49 @@ document.addEventListener("keydown", (event) => {
   setNavOpen(false);
 });
 
-contactForm?.addEventListener("submit", (event) => {
-  event.preventDefault();
-  if (!formNote) return;
-  formNote.textContent = "Thank you. Your enquiry is ready for the studio team to connect with you.";
-  contactForm.reset();
+contactForm?.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    if (!formNote) return;
+
+    const formData = new FormData(contactForm);
+
+    const payload = {
+      name: formData.get("name"),
+      phone: formData.get("phone"),
+      email: formData.get("email"),
+      city: formData.get("city"),
+      location: formData.get("location"),
+      projectType: formData.get("project-type"),
+      budget: formData.get("budget"),
+      projectDetails: formData.get("message")
+  };
+
+    formNote.textContent = "Submitting...";
+
+    try {
+        const response = await fetch("submit-lead.php", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(payload)
+        });
+
+        const result = await response.json();
+
+        if (!response.ok) {
+            throw new Error(result.response || "Something went wrong.");
+        }
+
+        formNote.textContent = "Thank you! Our team will contact you shortly.";
+
+        contactForm.reset();
+
+    } catch (error) {
+        formNote.textContent =
+            error.message || "Unable to submit enquiry. Please try again.";
+    }
 });
 
 if (testimonialCarousel) {
