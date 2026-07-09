@@ -75,6 +75,10 @@ contactForm?.addEventListener("submit", async (event) => {
             throw new Error(result.response || "Something went wrong.");
         }
 
+        if (typeof window.fbq === "function") {
+            window.fbq("track", "Lead");
+        }
+
         formNote.textContent = "Thank you! Our team will contact you shortly.";
 
         contactForm.reset();
