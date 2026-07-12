@@ -94,9 +94,17 @@ if (testimonialCarousel) {
   const dots = [...testimonialCarousel.querySelectorAll("[data-testimonial-dot]")];
   const previousButton = testimonialCarousel.querySelector("[data-testimonial-prev]");
   const nextButton = testimonialCarousel.querySelector("[data-testimonial-next]");
+  const track = testimonialCarousel.querySelector(".testimonial-track");
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   let activeIndex = 0;
   let autoplay;
+
+  function resizeTrack() {
+    if (!track || !slides.length) return;
+    const activeSlide = slides[activeIndex];
+    if (!activeSlide) return;
+    track.style.height = `${Math.ceil(activeSlide.scrollHeight)}px`;
+  }
 
   function showReview(index) {
     if (!slides.length) return;
@@ -107,6 +115,7 @@ if (testimonialCarousel) {
     dots.forEach((dot, dotIndex) => {
       dot.classList.toggle("is-active", dotIndex === activeIndex);
     });
+    window.requestAnimationFrame(resizeTrack);
   }
 
   function stopAutoplay() {
@@ -136,6 +145,9 @@ if (testimonialCarousel) {
 
   showReview(0);
   startAutoplay();
+  window.addEventListener("resize", resizeTrack, { passive: true });
+  window.addEventListener("load", resizeTrack);
+  document.fonts?.ready.then(resizeTrack);
 }
 
 updateHeader();
